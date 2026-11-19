@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacy Policy · Watch-It</title><meta name="description" content="Watch-It Privacy Policy">
+<style>
+:root{--bg:#f7f8fa;--card:#fff;--text:#1b1f24;--muted:#5b6470;--line:#e3e6ea;--accent:#1f7a6d;--soft:#eef5f3}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1316;--card:#161b1f;--text:#e6e9ec;--muted:#9aa4ad;--line:#262e34;--accent:#6cc0b2;--soft:#1a2427}}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+header{border-bottom:1px solid var(--line);background:var(--card)}
+.bar{max-width:820px;margin:0 auto;padding:14px 16px;display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.brand{font-weight:800;letter-spacing:-.02em;color:var(--text);text-decoration:none;margin-right:auto}
+nav a{color:var(--muted);text-decoration:none;font-size:14px;margin-left:14px}nav a.on{color:var(--accent);font-weight:600}
+main{max-width:820px;margin:24px auto;padding:0 16px}
+article{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px clamp(18px,4vw,40px)}
+h1{font-size:clamp(26px,5vw,34px);letter-spacing:-.02em;line-height:1.2;margin:0 0 12px}
+h2{font-size:20px;margin:32px 0 8px;letter-spacing:-.01em}
+a{color:var(--accent)}code{background:var(--soft);padding:1px 5px;border-radius:5px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:15px;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top}th{background:var(--soft)}
+hr{border:0;border-top:1px solid var(--line);margin:24px 0}
+li{margin:4px 0}
+footer{max-width:820px;margin:0 auto 40px;padding:0 16px;color:var(--muted);font-size:13px}
+.cards{display:grid;gap:12px;margin-top:18px}.cards a{display:block;padding:16px 18px;border:1px solid var(--line);border-radius:14px;text-decoration:none;color:var(--text);background:var(--soft)}
+.cards a b{display:block;color:var(--accent)}
+</style></head><body>
+<header><div class="bar"><a class="brand" href="index.html">Watch-It</a><nav><a href="privacy.html" class=on>Privacy Policy</a><a href="terms.html">Terms of Service</a><a href="delete-account.html">Delete account</a></nav></div></header>
+<main><article>
+<h1>Watch-It Privacy Policy</h1>
+<p><strong>Effective date:</strong> November 18, 2026<br />
+<strong>Last updated:</strong> November 18, 2026</p>
+<p>This policy explains what information the Watch-It app ("Watch-It", "we", "us") collects, why, where it goes, and the choices you have. Watch-It is made and run by <strong>Noam Amar</strong>, an individual developer based in Florida, United States ("we").</p>
+<p><strong>In short:</strong> your financial records live on your phone. Our server only holds what's needed to run your account, your plan, and your bank connections. We don't sell your data, show ads, or use analytics or advertising trackers.</p>
+<hr />
+<h2>1. Information stored only on your phone</h2>
+<p>Everything you enter or import into Watch-It stays in a database on your device. That includes accounts, records and transactions, budgets, goals, debts, planned payments, categories, labels, notes, places, contacts, loyalty cards, shopping lists, orders and invoices, and photos you attach. <strong>We never receive this data.</strong></p>
+<ul>
+<li><strong>Bank data on your phone.</strong> When you connect a bank, account names, balances and transactions are sent to your phone and saved in that same on-device database. Section 3 explains how this data passes through our server.</li>
+<li><strong>App lock.</strong> Your PIN and biometric settings stay on the device. Fingerprint and face data are handled by Android and are never available to Watch-It.</li>
+<li><strong>Android backup.</strong> If you have Android backup turned on, Android may back up the Watch-It database and settings to your Google account, under Google's terms. Our sign-in session is excluded from this backup. You can turn backup off in your phone's settings.</li>
+<li><strong>Export.</strong> Files you export (CSV and backups) go wherever you choose to save or share them.</li>
+</ul>
+<h2>2. Information our server stores</h2>
+<p>We use <strong>Supabase</strong> (hosting in the United States) to run the Watch-It server. The server stores:</p>
+<table>
+<thead>
+<tr>
+<th>Data</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>An account identifier. It's random for guest accounts. If you sign in with Google, it also includes your <strong>email address</strong>, plus your name and profile photo <strong>if Google shares them</strong>.</td>
+<td>To recognise your account across devices and restore your plan.</td>
+</tr>
+<tr>
+<td>Your <strong>plan status</strong>: tier, trial, renewal or expiry date, billing-issue flag.</td>
+<td>To unlock features and enforce plan limits.</td>
+</tr>
+<tr>
+<td>A <strong>bank-connect ledger</strong>: connects granted, purchased, used and refunded, with dates.</td>
+<td>To count your bank connects fairly (see the Terms of Service).</td>
+</tr>
+<tr>
+<td>For each linked bank: Plaid's <strong>item ID</strong>, an <strong>access token</strong>, the <strong>institution name and ID</strong>, status (active, paused or removed) and dates.</td>
+<td>To keep your bank syncing without the access token ever being stored on your phone.</td>
+</tr>
+<tr>
+<td>Standard server logs: IP address, time, request type, errors.</td>
+<td>Security, abuse prevention, and fixing problems.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Our server does not store your transactions, balances or account details.</strong> It passes them from Plaid straight to your phone.</p>
+<h2>3. Bank connections (Plaid)</h2>
+<p>Bank sync is provided by <strong>Plaid Inc.</strong> When you connect a bank:</p>
+<ul>
+<li>You log in to your bank inside Plaid's secure screen. <strong>Watch-It never sees or stores your bank username or password.</strong></li>
+<li>Plaid gives our server an access token for that bank. Our server uses it to fetch your accounts, balances and transactions, and sends them to your phone.</li>
+<li>Plaid collects and processes your information under the <strong>Plaid End User Privacy Policy</strong>: <a href="https://plaid.com/legal/#end-user-privacy-policy">https://plaid.com/legal/#end-user-privacy-policy</a>. By connecting a bank, you agree that Plaid may process your data as that policy describes.</li>
+<li>When you disconnect a bank, delete your account, or your plan has been inactive for 7 days, we tell Plaid to remove the connection and we delete the access token.</li>
+</ul>
+<h2>4. Purchases (Google Play and RevenueCat)</h2>
+<ul>
+<li><strong>Payments</strong> are processed by <strong>Google Play</strong>. We never see your card or payment details.</li>
+<li>We use <strong>RevenueCat</strong> to manage subscriptions and purchases. RevenueCat receives your Watch-It account identifier, your purchase and subscription history, and basic technical data (device model, operating system and app version, country, and IP address), so it can verify purchases and tell our server which plan you have. See RevenueCat's privacy policy at <a href="https://www.revenuecat.com/privacy">https://www.revenuecat.com/privacy</a>.</li>
+</ul>
+<h2>5. Other services</h2>
+<ul>
+<li><strong>Google Sign-In</strong> (optional). If you choose it, Google confirms your identity to us. Google's privacy policy: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
+<li><strong>Exchange rates.</strong> The app downloads currency rates from open.er-api.com. Those requests contain no personal data beyond what any internet request carries, such as your IP address.</li>
+</ul>
+<h2>6. Notifications</h2>
+<p>Reminders and alerts (bills, budgets, goals, and plan notices) are created <strong>on your phone</strong>. We don't use a push-notification service that sends your data to a server.</p>
+<h2>7. How we use information</h2>
+<p>We use information only to:
+- provide the app;
+- keep your banks syncing;
+- verify purchases and apply your plan;
+- count bank connects;
+- send you service notices inside the app;
+- keep the service secure;
+- meet our legal obligations.</p>
+<p>We don't sell or rent personal information, and we don't share it for cross-context behavioural advertising. We don't use your financial data to train AI models or build marketing profiles.</p>
+<h2>8. Sharing</h2>
+<p>We share information only with the service providers listed above, each acting on our behalf or under its own terms:
+- Supabase: hosting
+- Plaid: bank connections
+- RevenueCat: purchases
+- Google: Play billing, Sign-In, and Android backup if you enable it</p>
+<p>We may also disclose information when the law requires it, to protect rights and safety, or as part of a merger or acquisition. In an acquisition, this policy would continue to protect your information.</p>
+<h2>9. Keeping and deleting your information</h2>
+<ul>
+<li><strong>On your phone:</strong> your data stays until you delete it, clear the app's data, or uninstall the app.</li>
+<li><strong>On our server:</strong> we keep it while your account exists. After a plan ends, linked banks are paused, then removed from Plaid after 7 days.</li>
+<li><strong>Delete your account:</strong> go to <strong>More → Plan &amp; billing → Delete account</strong>. This disconnects every bank, erases your plan record, connects, purchase history at RevenueCat, and your account. It can't be undone. You can also ask us by email (see section 13), or use the steps at <a href="https://noamiko613.github.io/watchit-legal/delete-account.html">https://noamiko613.github.io/watchit-legal/delete-account.html</a>.</li>
+<li><strong>Subscriptions:</strong> deleting your account <strong>does not cancel a Google Play subscription</strong>. Cancel it in Google Play → Payments &amp; subscriptions.</li>
+<li><strong>Backups:</strong> server backups held by our hosting provider may keep deleted data for a limited time, up to 30 days, before it's overwritten.</li>
+</ul>
+<h2>10. Security</h2>
+<p>Connections to our server use encryption in transit (HTTPS). Bank access tokens are kept only on the server, behind access rules that stop any user, including you, from reading other users' data. The sign-in session on your phone is encrypted using Android's Keystore. No method of storage or transmission is 100% secure, but we work to protect your information.</p>
+<h2>11. Children</h2>
+<p>Watch-It isn't directed at children under 13, or under 16 in the EEA and UK. We don't knowingly collect personal information from them. If you believe a child has given us information, contact us and we'll delete it.</p>
+<h2>12. Your rights</h2>
+<p>Depending on where you live (for example under the GDPR in the EEA and UK, or under California and other US state privacy laws), you may have the right to:
+- access, correct, delete, or receive a copy of your personal information;
+- object to or restrict some processing;
+- withdraw consent;
+- complain to your data-protection authority.</p>
+<p>We don't sell or "share" personal information as California law defines it. To use any of these rights, use the in-app deletion or contact us. We won't treat you differently for using them.</p>
+<p>For the GDPR, our legal bases are: performing our contract with you (running the app, your plan and bank sync); legitimate interests (security, preventing abuse); legal obligation; and consent where we ask for it (for example, connecting a bank).</p>
+<p><strong>International transfers.</strong> Our providers process data in the United States. Where the law requires it, transfers rely on appropriate safeguards such as Standard Contractual Clauses.</p>
+<h2>13. Contact</h2>
+<p>Noam Amar (individual developer)<br />
+Florida, United States<br />
+Email: <strong>noamiko613@gmail.com</strong></p>
+<h2>14. Changes</h2>
+<p>If we change this policy, we'll update the "Last updated" date and, for significant changes, tell you in the app before they take effect.</p>
+</article></main>
+<footer>Watch-It · made by Noam Amar, individual developer · <a href="mailto:noamiko613@gmail.com">noamiko613@gmail.com</a></footer>
+</body></html>
